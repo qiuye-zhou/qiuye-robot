@@ -1,0 +1,31 @@
+{
+  "name": "qiuye-robot",
+  "version": "1.0.0",
+  "description": "QQ Robot",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "prod": "tsconfig-paths/register ./dist/src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiuye-zhou/qiuye-robot.git"
+  },
+  "author": "qiuye-zhou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qiuye-zhou/qiuye-robot/issues"
+  },
+  "homepage": "https://github.com/qiuye-zhou/qiuye-robot#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "oicq": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.2",
+    "tsconfig-paths": "^4.1.0",
+    "tsx": "^3.10.3",
+    "typescript": "^4.8.4"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "watch": ["src", "./config.ts"],
+    "ext": "ts,mjs,js,json,graphql",
+    "exec": "tsx src/index.ts",
+    "legacyWatch": true
+  }
