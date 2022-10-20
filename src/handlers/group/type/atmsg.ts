@@ -1,5 +1,5 @@
 import { GroupMessageEvent, MessageElem, TextElem } from "oicq";
-import { CommandMessage } from "~/handlers/shared/command";
+import { CommandMessage } from "../../shared/command";
 
 
 export const AtMessage = async (event: GroupMessageEvent, message: MessageElem[]) => {

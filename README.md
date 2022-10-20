@@ -4,6 +4,7 @@
 - 复读机
 - 命令交互
 - 通知(早晚安、欢迎新人)
+- 简单翻译
 
 ------
 
@@ -20,6 +21,15 @@
 nauther: qiuye
 framework: oicq
 ```
+
+```
+>/tr-xxxxxxxxx
+<Type:xxxxx
+
+翻译：xxxxxxxxx
+```
+
+
 
 ###### 通知示例
 

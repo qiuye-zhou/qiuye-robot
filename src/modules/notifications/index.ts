@@ -1,7 +1,7 @@
 import { CronJob } from 'cron'
 import { Client } from 'oicq'
 import { sample } from 'lodash'
-import { RobotConfig } from '~/config'
+import { RobotConfig } from '../../config'
 import { axiosHitokoto } from './apis/hitokoto'
 
 export const register = (client: Client) => {

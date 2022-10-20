@@ -1,13 +1,16 @@
 import type { GroupMessageEvent, TextElem } from 'oicq'
 import { performance } from 'node:perf_hooks';
 import PACKAGE from '../../../package.json'
+import { axiosfanyi } from './apis/fanyi';
 
 export const CommandMessage = async (event: GroupMessageEvent, message: TextElem, isquote?: boolean) => {
     if(!message) return
     const command = message.text.trim().slice(1)
     const arrs = command.split('—')
-    const commandName = arrs[0]
-    switch (commandName) {
+    console.log(arrs);
+    
+    const singleCommandName = arrs.length == 1 ? arrs[0] : ''
+    switch (singleCommandName) {
         case 'ping':
             return event.reply('pong', isquote)
     
@@ -34,6 +37,22 @@ export const CommandMessage = async (event: GroupMessageEvent, message: TextElem
         }
 
             
+        default:
+            break;
+    }
+
+    const manyCommandName = arrs[0]
+    switch (manyCommandName) {
+        case 'tr': {
+            const texts = arrs[1]
+            const data = await axiosfanyi(texts)
+            let fanyitext = ''
+            data.translateResult[0].forEach((e: { tgt: string; }) => {
+                fanyitext +=e.tgt
+            })
+            return event.reply(`Type:${data.type}\n\n翻译：${fanyitext}`, isquote)
+        }
+    
         default:
             break;
     }
