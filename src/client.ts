@@ -2,6 +2,8 @@ import { createClient, Platform } from 'oicq'
 import { RobotConfig } from './config'
 import { GroupMessageHandler } from './handlers/group'
 
+import './plugin'
+
 const account = RobotConfig.Uid
 
 const client = createClient(account, {
@@ -18,7 +20,6 @@ client.on('system.login.slider', function (e) {
 
 client.on('message.private', function (e) {
     console.log(e);
-    
 })
 
 client.on('message.group', async function (e) {
