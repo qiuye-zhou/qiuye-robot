@@ -45,6 +45,7 @@ export const CommandMessage = async (event: GroupMessageEvent, message: TextElem
     switch (manyCommandName) {
         case 'tr': {
             const texts = arrs[1]
+            if(texts == '') break;
             const data = await axiosfanyi(texts)
             let fanyitext = ''
             data.translateResult[0].forEach((e: { tgt: string; }) => {
