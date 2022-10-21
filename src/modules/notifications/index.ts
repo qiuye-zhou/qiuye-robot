@@ -26,7 +26,7 @@ export const register = (client: Client) => {
         }
     })
 
-    const dayEvening = new CronJob('0 16 21 * * *', async () => {
+    const dayEvening = new CronJob('0 00 22 * * *', async () => {
         try {
             const hitmsg = await axiosHitokoto()
             const days = RobotConfig.groupids.map((gid) => {
