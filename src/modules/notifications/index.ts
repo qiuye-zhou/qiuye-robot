@@ -11,21 +11,34 @@ export const register = (client: Client) => {
             '今天也是美好的一天呀！',
             '今天也要开开心心啊！'
         ])
-        const hitmsg = await axiosHitokoto()
-        const days = RobotConfig.groupids.map((gid) => {
-            client.sendGroupMsg(gid, `早上好！${strMorning}\n\n${hitmsg}`)
-        })
-
-        await Promise.all(days)
+        try {
+            const hitmsg = await axiosHitokoto()
+            const days = RobotConfig.groupids.map((gid) => {
+                client.sendGroupMsg(gid, `早上好！${strMorning}\n\n${hitmsg}`)
+            })
+    
+            await Promise.all(days)
+        } catch (error) {
+            const er = RobotConfig.groupids.map((gid) => {
+                client.sendGroupMsg(gid, `notifications模块出现错误\n\nMaster快去修东西bug呀！\n\nerror: ${error}`)
+            })
+            await Promise.all(er)
+        }
     })
 
-    const dayEvening = new CronJob('0 0 22 * * *', async () => {
-        const hitmsg = await axiosHitokoto()
-        const days = RobotConfig.groupids.map((gid) => {
-            client.sendGroupMsg(gid, `晚安！要早点睡哦！\n\n${hitmsg}`)
-        })
-
-        await Promise.all(days)
+    const dayEvening = new CronJob('0 16 21 * * *', async () => {
+        try {
+            const hitmsg = await axiosHitokoto()
+            const days = RobotConfig.groupids.map((gid) => {
+                client.sendGroupMsg(gid, `晚安！要早点睡哦！\n\n${hitmsg}`)
+            })
+            await Promise.all(days)
+        } catch (error) {
+            const er = RobotConfig.groupids.map((gid) => {
+                client.sendGroupMsg(gid, `notifications模块出现错误\n\nMaster快去修东西bug呀！\n\nerror: ${error}`)
+            })
+            await Promise.all(er)
+        }
     })
 
     client.on('notice.group.increase', async (e) => {

@@ -46,12 +46,16 @@ export const CommandMessage = async (event: GroupMessageEvent, message: TextElem
         case 'tr': {
             const texts = arrs[1]
             if(texts == '') break;
-            const data = await axiosfanyi(texts)
-            let fanyitext = ''
-            data.translateResult[0].forEach((e: { tgt: string; }) => {
-                fanyitext +=e.tgt
-            })
-            return event.reply(`Type:${data.type}\n\n翻译：${fanyitext}`, isquote)
+            try {
+                const data = await axiosfanyi(texts)
+                let fanyitext = ''
+                data.translateResult[0].forEach((e: { tgt: string; }) => {
+                    fanyitext +=e.tgt
+                })
+                return event.reply(`Type:${data.type}\n\n翻译：${fanyitext}`, isquote)
+            } catch (error) {
+                return event.reply(`翻译接口出现错误\n\nMaster快去修东西bug呀！\n\nerror: ${error}`, isquote)
+            }
         }
     
         default:
