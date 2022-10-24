@@ -5,6 +5,7 @@
 - 命令交互
 - 通知(早晚安、欢迎新人)
 - 简单翻译
+- 艾特简单回复
 
 ------
 
@@ -29,7 +30,15 @@ framework: oicq
 翻译：xxxxxxxxx
 ```
 
+###### 命令列表
 
+```
+/ping
+/uptime
+/version
+/help
+/tr-xxxx
+```
 
 ###### 通知示例
 
