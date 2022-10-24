@@ -1,5 +1,5 @@
 import { GroupMessageEvent, MessageElem } from "oicq";
-import { OnionCalleAction } from "src/utils/onion";
+import { OnionCalleAction } from "../../utils/onion";
 
 export type GroupOnionRoutine = (
     this: OnionCalleAction,

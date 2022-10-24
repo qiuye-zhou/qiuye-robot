@@ -1,4 +1,4 @@
-import { praseCommandMessage } from 'src/utils/commandmessage';
+import { praseCommandMessage } from '../../../utils/commandmessage';
 import { GroupOnionRoutine } from '../types';
 import { isRepeater } from './../../shared/repeater';
 

@@ -1,4 +1,3 @@
-import { CommandMessage } from "../../shared/command";
 import { GroupOnionRoutine } from "../types";
 import { praseCommandMessage } from './../../../utils/commandmessage';
 import { RobotConfig } from './../../../config';
