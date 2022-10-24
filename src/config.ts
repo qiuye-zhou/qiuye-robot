@@ -5,5 +5,6 @@ export const RobotConfig = {
     groupids: [
         281649921,
         1159121690
-    ]
+    ],
+    master: 1302580865
 }

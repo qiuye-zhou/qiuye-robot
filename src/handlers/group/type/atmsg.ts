@@ -1,20 +1,42 @@
-import { GroupMessageEvent, MessageElem, TextElem } from "oicq";
 import { CommandMessage } from "../../shared/command";
+import { GroupOnionRoutine } from "../types";
+import { praseCommandMessage } from './../../../utils/commandmessage';
+import { RobotConfig } from './../../../config';
+import { sample } from "lodash";
 
 
-export const AtMessage = async (event: GroupMessageEvent, message: MessageElem[]) => {
-    const atMessage: TextElem = message[1] as TextElem
+export const AtMessage: GroupOnionRoutine = async function (event) {
+    const messages = event.message
+    const atMessageIndex = messages.findIndex((e) => {
+        return e.type === 'at'
+    })
 
-    if(atMessage) {
-        const isText = atMessage.type = 'text'
-        const isCommand = isText && atMessage.text.trim().startsWith('/')
-        const isPing = isText && (atMessage.text.trim() == 'ping')
+    if (atMessageIndex < 0) {
+        this.next()
+        return
+    }
 
-        if(isCommand) {
-            return await CommandMessage(event, atMessage, true)
+    const afterText = messages[atMessageIndex + 1] as any
+
+    if (afterText && afterText.text !== ' ') {
+        const isText = afterText.type = 'text'
+
+        if (isText) {
+            const command = await praseCommandMessage(afterText.text, afterText)
+            Object.assign(event, command)
+            event.isQuote = true
+
+            return this.next()
         }
-        if(isPing) {
-            return event.reply('pong', true)
+    } else {
+        if(event.sender.user_id == RobotConfig.master) {
+            const result = sample(['有什么事情吗','盯...盯...','唔...听不懂...'])
+            event.reply(`${result}`)
+        } else {
+            const result = sample(['没事别艾特我了！！','你在说什么？','盯...盯...','Master他们在说什么东西啊','没事别瞎整了！'])
+            event.reply(`${result}`)
         }
     }
+
+    this.abort()
 }
