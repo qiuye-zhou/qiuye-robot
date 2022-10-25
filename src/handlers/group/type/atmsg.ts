@@ -29,10 +29,10 @@ export const AtMessage: GroupOnionRoutine = async function (event) {
         }
     } else {
         if(event.sender.user_id == RobotConfig.master) {
-            const result = sample(['有什么事情吗','盯...盯...','唔...听不懂...'])
+            const result = sample(['有什么事情吗','盯...盯...','我在听呢'])
             event.reply(`${result}`)
         } else {
-            const result = sample(['没事别艾特我了！！','你在说什么？','盯...盯...','Master他们在说什么东西啊','没事别瞎整了！'])
+            const result = sample(['没事别艾特我了！！','你想说什么','盯...盯...','没事别瞎整了！'])
             event.reply(`${result}`)
         }
     }
