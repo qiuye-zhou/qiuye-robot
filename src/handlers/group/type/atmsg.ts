@@ -2,12 +2,15 @@ import { GroupOnionRoutine } from "../types";
 import { praseCommandMessage } from './../../../utils/commandmessage';
 import { RobotConfig } from './../../../config';
 import { sample } from "lodash";
+import { AtElem } from "oicq";
 
 
 export const AtMessage: GroupOnionRoutine = async function (event) {
     const messages = event.message
     const atMessageIndex = messages.findIndex((e) => {
-        return e.type === 'at'
+        if ((e as AtElem).qq ===RobotConfig.Uid) {
+            return e.type === 'at'
+        }
     })
 
     if (atMessageIndex < 0) {
