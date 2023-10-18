@@ -8,7 +8,7 @@ const client = createClient({
 
 client.on('system.online', () => console.log('Login succeeded'))
 client.on('system.login.slider', function (e) {
-    console.log('请输入ticket:');
+    console.log(`请输入滑块地址获取的ticket: \n滑块地址：   ${e.url}`);
     process.stdin.once('data', (data) => {
         client.submitSlider(data.toString().trim())
     })
