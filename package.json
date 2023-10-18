@@ -21,7 +21,7 @@
   "dependencies": {
     "@types/cron": "^2.0.0",
     "axios": "^1.5.0",
-    "cron": "^2.1.0",
+    "cron": "^3.0.0",
     "icqq": "0.6.1",
     "lodash": "^4.17.21",
     "nodemon": "^2.0.20"
