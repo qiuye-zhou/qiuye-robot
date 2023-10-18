@@ -1,4 +1,4 @@
-import { TextElem } from "oicq";
+import { TextElem } from "icqq";
 
 export const praseCommandMessage = async (messageText: string, messageEle?: TextElem) => {
     const args = messageText.split('—')
