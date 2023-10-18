@@ -1,6 +1,6 @@
 import { GroupOnionRoutine } from "../types";
 import { praseCommandMessage } from './../../../utils/commandmessage';
-import { RobotConfig } from './../../../config';
+import { RobotConfig } from '../../../config';
 import { sample } from "lodash";
 import { AtElem } from "icqq";
 
