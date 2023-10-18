@@ -2,7 +2,7 @@ import { GroupOnionRoutine } from "../types";
 import { praseCommandMessage } from './../../../utils/commandmessage';
 import { RobotConfig } from './../../../config';
 import { sample } from "lodash";
-import { AtElem } from "oicq";
+import { AtElem } from "icqq";
 
 
 export const AtMessage: GroupOnionRoutine = async function (event) {

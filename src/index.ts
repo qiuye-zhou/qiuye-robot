@@ -1,10 +1,10 @@
-import { register as registerNotificatios } from './modules/notifications'
+import { hook } from './utils/plugin'
 
 async function bootstrap() {
     const { client } = await import('./client')
     client.login()
     
-    client.use(registerNotificatios)
+    await hook.runAsyncWaterfall(client)
 }
 
 bootstrap()

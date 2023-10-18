@@ -1,4 +1,4 @@
-import type { GroupMessageEvent } from 'oicq'
+import type { GroupMessageEvent } from 'icqq'
 import { Onion } from '../../utils/onion'
 import { CommandMessage } from './type/command'
 import { AtMessage } from './type/atmsg'

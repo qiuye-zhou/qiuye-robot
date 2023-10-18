@@ -18,7 +18,7 @@ export const CommandMessage: GroupOnionRoutine = async function (event) {
         case 'version':
             return event.reply(
                 `qiuye-robot: v${PACKAGE.version}` +
-                `\nauther: qiuye\nframework: oicq`,
+                `\nauther: qiuye\nframework: icqq`,
                 isQuote,
             )
         case 'uptime': {
@@ -66,7 +66,7 @@ export const CommandMessage: GroupOnionRoutine = async function (event) {
                 const result = sample(['盯...盯...','唔...听不懂...','唔...是不是命令敲错了...'])
                 return event.reply(`${result}`, isQuote)
             } else {
-                const result = sample(['你是不是敲错了命令！','盯...盯...','Master他们在敲什么东西啊！','没事别瞎整了！'])
+                const result = sample(['你是不是敲错了命令！','盯...盯...','没事别瞎整了！'])
                 return event.reply(`${result}`, isQuote)
             }
         }

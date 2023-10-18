@@ -1,4 +1,4 @@
-import { GroupMessageEvent, MessageElem } from "oicq";
+import { GroupMessageEvent, MessageElem } from "icqq";
 import { OnionCalleAction } from "../../utils/onion";
 
 export type GroupOnionRoutine = (
@@ -6,7 +6,7 @@ export type GroupOnionRoutine = (
     message: GroupMessageEvent,
   ) => void
 
-  declare module 'oicq' {
+  declare module 'icqq' {
     interface TextElem {
       commandName?: string
       commandArgs?: string[]

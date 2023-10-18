@@ -1,5 +1,5 @@
 import { CronJob } from 'cron'
-import { Client } from 'oicq'
+import { Client } from 'icqq'
 import { sample } from 'lodash'
 import { RobotConfig } from '../../config'
 import { axiosHitokoto } from './apis/hitokoto'

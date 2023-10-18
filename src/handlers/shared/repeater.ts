@@ -1,4 +1,4 @@
-import type { Message } from 'oicq'
+import type { Message } from 'icqq'
 
 const group_idMessageQueue = new Map<string, string[]>()
 const num = 3

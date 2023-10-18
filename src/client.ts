@@ -1,22 +1,26 @@
-import { createClient, Platform } from 'oicq'
+import { createClient, Platform } from 'icqq'
 import { RobotConfig } from './config'
 import { GroupMessageHandler } from './handlers/group'
 
-import './plugin'
-
-const account = RobotConfig.Uid
-
-const client = createClient(account, {
-    platform: Platform.iPad
+const client = createClient({
+    platform: Platform.Watch
 })
 
 client.on('system.online', () => console.log('Login succeeded'))
 client.on('system.login.slider', function (e) {
     console.log('请输入ticket:');
-    process.stdin.once('data', (ticket) => {
-        this.submitSlider(String(ticket).trim())
+    process.stdin.once('data', (data) => {
+        client.submitSlider(data.toString().trim())
     })
-}).login(RobotConfig.password)
+})
+client.on('system.login.qrcode', (e) => {
+    console.log('扫码完成后回车继续：   ')
+    process.stdin.once('data', () => {
+      client.login()
+    })
+})
+
+client.login(RobotConfig.Uid, RobotConfig.password)
 
 client.on('message.private', function (e) {
     console.log(e);
