@@ -1,11 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/cron': ^2.0.0
+  '@types/cron': ^2.0.1
   '@types/lodash': ^4.14.186
   '@types/node': ^18.11.2
   axios: ^1.5.0
-  cron: ^2.1.0
+  cron: ^2.4.4
   icqq: 0.6.1
   lodash: ^4.17.21
   nodemon: ^2.0.20
@@ -14,7 +14,7 @@ specifiers:
   typescript: ^4.8.4
 
 dependencies:
-  '@types/cron': 2.4.0
+  '@types/cron': 2.0.1
   axios: 1.5.1
   cron: 2.4.4
   icqq: 0.6.1
@@ -228,24 +228,27 @@ packages:
     dev: true
     optional: true
 
-  /@types/cron/2.4.0:
-    resolution: {integrity: sha512-5bBaAkqvSFBX8JMi/xCofNzG5E594TNsApMz68dLd/sQYz/HGQqgcxGHTRjOvD4G3Y+YF1Oo3S7QdCvKt1KAJQ==}
-    deprecated: This is a stub types definition. cron provides its own type definitions, so you do not need this installed.
+  /@types/cron/2.0.1:
+    resolution: {integrity: sha512-WHa/1rtNtD2Q/H0+YTTZoty+/5rcE66iAFX2IY+JuUoOACsevYyFkSYu/2vdw+G5LrmO7Lxowrqm0av4k3qWNQ==}
     dependencies:
-      cron: 2.4.4
+      '@types/luxon': 3.4.2
+      '@types/node': 18.18.5
     dev: false
 
   /@types/lodash/4.14.199:
     resolution: {integrity: sha512-Vrjz5N5Ia4SEzWWgIVwnHNEnb1UE1XMkvY5DGXrAeOGE9imk0hgTHh5GyDjLDJi9OTCn9oo9dXH1uToK1VRfrg==}
     dev: true
 
-  /@types/luxon/3.3.2:
-    resolution: {integrity: sha512-l5cpE57br4BIjK+9BSkFBOsWtwv6J9bJpC7gdXIzZyI0vuKvNTk0wZZrkQxMGsUAuGW9+WMNWF2IJMD7br2yeQ==}
+  /@types/luxon/3.3.8:
+    resolution: {integrity: sha512-jYvz8UMLDgy3a5SkGJne8H7VA7zPV2Lwohjx0V8V31+SqAjNmurWMkk9cQhfvlcnXWudBpK9xPM1n4rljOcHYQ==}
+    dev: false
+
+  /@types/luxon/3.4.2:
+    resolution: {integrity: sha512-TifLZlFudklWlMBfhubvgqTXRzLDI5pCbGa4P8a3wPyUQSW+1xQ5eDsreP9DWHX3tjq1ke96uYG/nwundroWcA==}
     dev: false
 
   /@types/node/18.18.5:
     resolution: {integrity: sha512-4slmbtwV59ZxitY4ixUZdy1uRLf9eSIvBWPQxNjhHYWEtn0FryfKpyS2cvADYXTayWdKEIsJengncrVvkI4I6A==}
-    dev: true
 
   /abbrev/1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
@@ -329,7 +332,7 @@ packages:
   /cron/2.4.4:
     resolution: {integrity: sha512-MHlPImXJj3K7x7lyUHjtKEOl69CSlTOWxS89jiFgNkzXfvhVjhMz/nc7/EIfN9vgooZp8XTtXJ1FREdmbyXOiQ==}
     dependencies:
-      '@types/luxon': 3.3.2
+      '@types/luxon': 3.3.8
       luxon: 3.3.0
     dev: false
 
