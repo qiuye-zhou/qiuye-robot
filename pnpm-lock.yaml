@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/cron': ^2.0.0
   '@types/lodash': ^4.14.186
-  '@types/node': ^18.11.2
+  '@types/node': ^18.19.59
   axios: ^1.5.0
   cron: ^2.1.0
   icqq: 0.6.1
@@ -23,7 +23,7 @@ dependencies:
 
 devDependencies:
   '@types/lodash': 4.14.199
-  '@types/node': 18.18.5
+  '@types/node': 18.19.59
   tsconfig-paths: 4.2.0
   tsx: 3.14.0
   typescript: 4.9.5
@@ -243,8 +243,10 @@ packages:
     resolution: {integrity: sha512-l5cpE57br4BIjK+9BSkFBOsWtwv6J9bJpC7gdXIzZyI0vuKvNTk0wZZrkQxMGsUAuGW9+WMNWF2IJMD7br2yeQ==}
     dev: false
 
-  /@types/node/18.18.5:
-    resolution: {integrity: sha512-4slmbtwV59ZxitY4ixUZdy1uRLf9eSIvBWPQxNjhHYWEtn0FryfKpyS2cvADYXTayWdKEIsJengncrVvkI4I6A==}
+  /@types/node/18.19.59:
+    resolution: {integrity: sha512-vizm2EqwV/7Zay+A6J3tGl9Lhr7CjZe2HmWS988sefiEmsyP9CeXEleho6i4hJk/8UtZAo0bWN4QPZZr83RxvQ==}
+    dependencies:
+      undici-types: 5.26.5
     dev: true
 
   /abbrev/1.1.1:
@@ -812,6 +814,10 @@ packages:
   /undefsafe/2.0.5:
     resolution: {integrity: sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==}
     dev: false
+
+  /undici-types/5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
 
   /universalify/0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
