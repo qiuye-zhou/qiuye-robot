@@ -1,11 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/cron': ^2.0.0
+  '@types/cron': ^2.4.3
   '@types/lodash': ^4.14.186
   '@types/node': ^18.11.2
   axios: ^1.5.0
-  cron: ^2.1.0
+  cron: ^2.4.4
   icqq: 0.6.1
   lodash: ^4.17.21
   nodemon: ^2.0.20
@@ -14,7 +14,7 @@ specifiers:
   typescript: ^4.8.4
 
 dependencies:
-  '@types/cron': 2.4.0
+  '@types/cron': 2.4.3
   axios: 1.5.1
   cron: 2.4.4
   icqq: 0.6.1
@@ -228,8 +228,8 @@ packages:
     dev: true
     optional: true
 
-  /@types/cron/2.4.0:
-    resolution: {integrity: sha512-5bBaAkqvSFBX8JMi/xCofNzG5E594TNsApMz68dLd/sQYz/HGQqgcxGHTRjOvD4G3Y+YF1Oo3S7QdCvKt1KAJQ==}
+  /@types/cron/2.4.3:
+    resolution: {integrity: sha512-ViRBkoZD9Rk0hGeMdd2GHGaOaZuH9mDmwsE5/Zo53Ftwcvh7h9VJc8lIt2wdgEwS4EW5lbtTX6vlE0idCLPOyA==}
     deprecated: This is a stub types definition. cron provides its own type definitions, so you do not need this installed.
     dependencies:
       cron: 2.4.4
@@ -239,8 +239,8 @@ packages:
     resolution: {integrity: sha512-Vrjz5N5Ia4SEzWWgIVwnHNEnb1UE1XMkvY5DGXrAeOGE9imk0hgTHh5GyDjLDJi9OTCn9oo9dXH1uToK1VRfrg==}
     dev: true
 
-  /@types/luxon/3.3.2:
-    resolution: {integrity: sha512-l5cpE57br4BIjK+9BSkFBOsWtwv6J9bJpC7gdXIzZyI0vuKvNTk0wZZrkQxMGsUAuGW9+WMNWF2IJMD7br2yeQ==}
+  /@types/luxon/3.3.8:
+    resolution: {integrity: sha512-jYvz8UMLDgy3a5SkGJne8H7VA7zPV2Lwohjx0V8V31+SqAjNmurWMkk9cQhfvlcnXWudBpK9xPM1n4rljOcHYQ==}
     dev: false
 
   /@types/node/18.18.5:
@@ -329,7 +329,7 @@ packages:
   /cron/2.4.4:
     resolution: {integrity: sha512-MHlPImXJj3K7x7lyUHjtKEOl69CSlTOWxS89jiFgNkzXfvhVjhMz/nc7/EIfN9vgooZp8XTtXJ1FREdmbyXOiQ==}
     dependencies:
-      '@types/luxon': 3.3.2
+      '@types/luxon': 3.3.8
       luxon: 3.3.0
     dev: false
 
