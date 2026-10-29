@@ -24,7 +24,7 @@
     "cron": "^2.1.0",
     "icqq": "0.6.1",
     "lodash": "^4.17.21",
-    "nodemon": "^2.0.20"
+    "nodemon": "^3.0.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.186",
