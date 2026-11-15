@@ -10,7 +10,7 @@ specifiers:
   lodash: ^4.17.21
   nodemon: ^2.0.20
   tsconfig-paths: ^4.1.0
-  tsx: ^3.10.3
+  tsx: ^3.14.0
   typescript: ^4.8.4
 
 dependencies:
@@ -465,8 +465,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /get-tsconfig/4.7.2:
-    resolution: {integrity: sha512-wuMsz4leaj5hbGgg4IvDU0bqJagpftG5l5cXIAvo8uZrqn0NJqwtfupTN00VnkQJPcIRrxYrm1Ue24btpCha2A==}
+  /get-tsconfig/4.14.3:
+    resolution: {integrity: sha512-++QEw4DIY7WGoukz+/+A/8dGYPT9l9yIadnmSgZ8Rjr3YVSVDipQSO9CdnJo9ePqFqUUqh+wk9uIaoiAwsiPkA==}
     dependencies:
       resolve-pkg-maps: 1.0.0
     dev: true
@@ -797,7 +797,7 @@ packages:
     hasBin: true
     dependencies:
       esbuild: 0.18.20
-      get-tsconfig: 4.7.2
+      get-tsconfig: 4.14.3
       source-map-support: 0.5.21
     optionalDependencies:
       fsevents: 2.3.3
