@@ -6,7 +6,7 @@ specifiers:
   '@types/node': ^18.11.2
   axios: ^1.5.0
   cron: ^2.1.0
-  icqq: 0.6.1
+  icqq: 0.6.10
   lodash: ^4.17.21
   nodemon: ^2.0.20
   tsconfig-paths: ^4.1.0
@@ -17,7 +17,7 @@ dependencies:
   '@types/cron': 2.4.0
   axios: 1.5.1
   cron: 2.4.4
-  icqq: 0.6.1
+  icqq: 0.6.10
   lodash: 4.17.21
   nodemon: 2.0.22
 
@@ -494,15 +494,17 @@ packages:
       safer-buffer: 2.1.2
     dev: false
 
-  /icqq/0.6.1:
-    resolution: {integrity: sha512-ljBHn2GpJifeKNhVDrB8jv+HyTpra3lqe93FFUDMQSnECoyTVzufVEm+iIljEoKHnTHXlf7SryfeLTXpgjYjTw==}
+  /icqq/0.6.10:
+    resolution: {integrity: sha512-3LfK9r7WUnuVFyrVDH92DgFhsqNK/Itp91XJAD+DZHKEQK6UlR7F+xoEcpUIEfi9dy8GWqOgr5ZTunjd5GhMdA==}
     engines: {node: '>= v14'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     dependencies:
       axios: 1.5.1
       log4js: 6.9.1
       long: 4.0.0
       pngjs: 6.0.0
       probe-image-size: 7.2.3
+      silk-wasm: 3.7.1
       triptrap: 0.0.17
     transitivePeerDependencies:
       - debug
@@ -713,6 +715,11 @@ packages:
   /semver/7.0.0:
     resolution: {integrity: sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==}
     hasBin: true
+    dev: false
+
+  /silk-wasm/3.7.1:
+    resolution: {integrity: sha512-mXPwLRtZxrYV3TZx41jMAeKc80wvmyrcXIcs8HctFxK15Ahz2OJQENYhNgEPeCEOdI6Mbx1NxQsqxzwc3DKerw==}
+    engines: {node: '>=16.11.0'}
     dev: false
 
   /simple-update-notifier/1.1.0:
